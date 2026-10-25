@@ -4,24 +4,25 @@ class ATM:
         self.pin=''
         self.menu()
     def menu(self):
-        user=input(""" What can we help you with?
+        while True:
+            user=input(""" What can we help you with?
         1. Create pin
         2. Withdraw
         3. Deposit
         4. Check balance
         5. exit
 """)
-        if user=="1":
-            self.create_pin()
-        elif user=="2":
-            self.withdraw()
-        elif user=="3":
-            self.deposit()
-        elif user=="4":
-            self.balance()
-        else:
-            print("byee")
-
+            if user=="1":
+                self.create_pin()
+            elif user=="2":
+                self.withdraw()
+            elif user=="3":
+                self.deposit()
+            elif user=="4":
+                self.check_balance()
+            else:
+                print("byee")
+                break
     def create_pin(self):
        self.pin=input("Enter pin you want to set: ")
        print("pin created successfully")
@@ -39,7 +40,7 @@ class ATM:
         self.balance=self.balance+amount
         print(amount,"deposited successfully")
 
-    def balance(self):
+    def check_balance(self):
         print("balance is",self.balance)
 
 
