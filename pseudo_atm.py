@@ -3,6 +3,10 @@ class ATM:
         self.balance=0
         self.pin=''
         self.menu()
+        print("SBI")
+        print(id(self))
+        print("HDFC")
+        print(id(self))
     def menu(self):
         while True:
             user=input(""" What can we help you with?
@@ -45,5 +49,4 @@ class ATM:
 
 
 sbi=ATM()
-
-        
+hdfc=ATM()
