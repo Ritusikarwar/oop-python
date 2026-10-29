@@ -1,6 +1,6 @@
 class ATM:
     def __init__(self):
-        self.balance=0
+        self.__balance=0
         self.pin=''
         self.menu()
     def __str__(self):
@@ -31,19 +31,20 @@ class ATM:
 
     def withdraw(self):
         amount=int(input("Enter the amount you want to withdraw:  "))
-        if amount<self.balance:
-            self.balance=self.balance-amount
+        if amount<self.__balance:
+            self.__balance=self.__balance-amount
             print(amount,"withdrawn successfully")
         else:
             print("oh! ohh! not enough balance")
 
     def deposit(self):
         amount=int(input("Enter the amount you want to deposit:  "))
-        self.balance=self.balance+amount
+        self.__balance=self.__balance+amount
         print(amount,"deposited successfully")
 
     def check_balance(self):
-        print("balance is",self.balance)
+        print("balance is",self.__balance)
 
 
 sbi=ATM()
+sbi._ATM__balance="897897"
