@@ -1,7 +1,7 @@
 class ATM:
     def __init__(self):
         self.__balance=0
-        self.pin=''
+        self.__pin=''
         self.menu()
     def __str__(self):
         return "Welcome to SBI ATM"
@@ -26,8 +26,11 @@ class ATM:
                 print("byee")
                 break
     def create_pin(self):
-       self.pin=input("Enter pin you want to set: ")
+       self.__pin=input("Enter pin you want to set: ")
        print("pin created successfully")
+
+    def get__pin(self):
+        return self.__pin
 
     def withdraw(self):
         amount=int(input("Enter the amount you want to withdraw:  "))
