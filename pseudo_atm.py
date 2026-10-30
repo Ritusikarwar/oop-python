@@ -3,6 +3,8 @@ class ATM:
         self.__balance=0
         self.__pin=''
         self.menu()
+        print("reference of the object is")
+        print(id(self))
     def __str__(self):
         return "Welcome to SBI ATM"
     def menu(self):
@@ -49,5 +51,5 @@ class ATM:
         print("balance is",self.__balance)
 
 
-sbi=ATM()
-sbi._ATM__balance="897897"
+ATM()
+
