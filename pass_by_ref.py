@@ -1,11 +1,10 @@
 class Customer:
-    def __init__(self,name,gender):
+    def __init__(self,name):
         self.name=name
-        self.gender=gender
-
-cust=Customer("Julia","Female")
+print("real class id:   ")
+cust=Customer("Julia")
+print(id(cust))
 
 def greet(customer):
-    return cust2
-cust2=greet(cust)
-print()
+    print(id(customer))
+greet(cust)
